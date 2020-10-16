@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+  <title>?</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-image: url("q.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 90% 10%;
+    }
+    label{
+      font-size: 150%;
+    }
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+    #snackbar.show {
+      visibility: visible;
+    }
 
-You can use the [editor on GitHub](https://github.com/chensourceforge/no_response/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+  </style>
+</head>
+<body>
+<h1>双鱼座为什么不回答我的问题</h1>
+&nbsp; &nbsp; <input type="radio" id="eyes" name="answer" onclick="showToast(1)">
+<label for="eyes">&#128064; &#128064; &#128064;</label><br>
+&nbsp; &nbsp; <input type="radio" id="poo" name="answer" onclick="showToast(2)">
+<label for="poo">&#128169; &#128169; &#128169;</label><br>
+&nbsp; &nbsp; <input type="radio" id="skull" name="answer" onclick="showToast(3)">
+<label for="skull">&#128128; &#128128; &#128128;</label><br>
+&nbsp; &nbsp; <input type="radio" id="flower" name="answer" onclick="showToast(4)">
+<label for="flower">&#129344; &#129344; &#129344;</label><br>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<div id="snackbar">.</div>
 
-### Markdown
+<script>
+function showToast(n) {
+  var x = document.getElementById("snackbar");
+  if(n == 1) x.innerText = "大人没教你";
+  else if(n == 2) x.innerText = "这样没有礼貌吗";
+  else if(n == 3) x.innerText = "什么意思啊";
+  else x.innerText = "我不会心电感应";
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chensourceforge/no_response/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
