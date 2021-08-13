@@ -52,13 +52,18 @@
 
 <div id="snackbar">.</div>
 
+<audio controls>
+  <source src="C4.wav" type="audio/wav">
+</audio>
+
+
 <script>
 function showToast(n) {
   var x = document.getElementById("snackbar");
   if(n == 1) x.innerText = "大人没教的吗";
   else if(n == 2) x.innerText = "这是不礼貌的";
   else if(n == 3) x.innerText = "什么意思啊";
-  else x.innerText = "我不会心电感应";
+  else x.innerText = "我不能心电感应";
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
 }
